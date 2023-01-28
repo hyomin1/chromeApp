@@ -1,5 +1,5 @@
 const h1 = document.querySelector(".hello h1");
-
+document.getElementById
 
 function handleTitleClick() {
     h1.style.color = "blue";
