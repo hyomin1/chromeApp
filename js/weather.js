@@ -17,9 +17,4 @@ function onGeoError() {
     alert("Can't find you. No weather for you");
 }
 
-
-function a() {
-    console.log("a");
-    console.log("b");
-}
 navigator.geolocation.getCurrentPosition(onGeoOk,onGeoError); 
