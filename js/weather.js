@@ -8,4 +8,8 @@ function onGeoError() {
     alert("Can't find you. No weather for you");
 }
 
+function a() {
+    
+}
+
 navigator.geolocation.getCurrentPosition(onGeoOk,onGeoError); 
