@@ -5,7 +5,8 @@
 body {
     font-family: 'Mochiy Pop One', sans-serif;
     margin : 0;
-    width:100%;
+    width:100vw;
+    height:100vh;
     
 }
 
@@ -158,14 +159,21 @@ img:not(#weatherIcon) {
 #todo-list {
     list-style: none;
     color:white;
+    width:300px;
+    height: 200px;
+    overflow: scroll;
+    overflow-x: hidden;
 
 }
+#todo-list::-webkit-scrollbar {
+    display: none;
+}
+
 #todo-list li {
     display: flex;
     width: 100%;
     justify-content: space-between;
     margin-bottom: 5px;
-    
 
 }
 
