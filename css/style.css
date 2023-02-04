@@ -163,7 +163,6 @@ img:not(#weatherIcon) {
     height: 200px;
     overflow: scroll;
     overflow-x: hidden;
-
 }
 #todo-list::-webkit-scrollbar {
     display: none;
