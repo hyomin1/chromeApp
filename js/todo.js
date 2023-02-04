@@ -22,12 +22,17 @@ function deleteTodo(event) {
 function paintToDo(newTodo) {
     const li = document.createElement("li");
     li.id = newTodo.id;
+    const label = document.createElement("label");
     const span = document.createElement("span");
+    const div = document.createElement("div");
     span.innerText = newTodo.text;
     const button = document.createElement("button");
-    button.innerText = "X";
+    label.innerText = "🚀";
+    button.innerText = "💨";
+    div.appendChild(label);
+    div.appendChild(span);
     button.addEventListener("click",deleteTodo);
-    li.appendChild(span);
+    li.appendChild(div);
     li.appendChild(button);
     toDoList.appendChild(li); //ul에 li넣어서 todo list 화면에 띄워줌
 

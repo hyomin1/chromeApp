@@ -1,49 +1,52 @@
 const quotes = [
     {
-    quote: 'I never dreamed about success, I worked for it',
-    author: 'Estee Lauder'
+    quote: '본연의 모습은 바꿀 수 없다. 바꿀 수 있는 것은 자신의 행동 뿐.',
+    author: 'Philip Pullman'
     },
     {
-    quote: 'Do not try to be original, just try to be good.',
-    author: 'Paul Rand'
+    quote: '다른 사람들이 당신을 향해 던지는 돌을 가지고 튼튼한 기반을 쌓아라.',
+    author: 'David Brinkley'
     },
     {
-    quote: 'Do not be afraid to give up the good to go for the great',
-    author: 'John D. Rockefeller'
+    quote: '당신이 세상을 바라보는 방법을 바꾸면 당신이 보는 세상은 달라질 것이다.',
+    author: 'Wayne Dyer'
     },
     {
-    quote: 'If you cannot fly then run. If you cannot run, then walk. And if you cannot walk, then crawl, but whatever you do, you have to keep moving forward.',
-    author: 'Martin Luther King Jr.'
+    quote: '당신이 경주한다면 패배할 가능성도 있겠지만, 경주하지 않는다면 당신은 이미 패배한 것이다.',
+    author: 'Barack Obama'
     },
     {
-    quote: 'Our greatest weakness lies in giving up. The most certain way to succeed is always to try just one more time.',
-    author: 'Thomas Edison'
+    quote: '지금까지 항상 그 방식대로 해 온 것이라면, 그 방식은 아마도 잘못된 것이다.',
+    author: 'Chrales Kettering'
     },
     {
-    quote: 'The fastest way to change yourself is to hang out with people who are already the way you want to be',
-    author: 'REid Hoffman'
+    quote: '당신이 인생에서 저지를 수 있는 가장 큰 실수는 실수를 할 까봐 계속 두려워 한 것이다.',
+    author: 'Elbert Hubbard'
     },
     {
-    quote: 'Money is like gasoline during a road trip. You do not want to run out of gas on your trip, but you are not doing a tour of gas stations',
-    author: 'Tim O Reilly'
+    quote: '당신이 대면하는 모든 것을 바꿀 수는 없다. 그러나 대면하지 않는다면 아무것도 바뀌지 않는다.',
+    author: 'James Baldwin'
     },
     {
-    quote: 'Some people dream of success, while other people get up every morning and make it happen',
-    author: 'Wayne Huizenga'
+    quote: '만약 일 하는 것이 그렇게 좋은 것이라면, 부자들이 일하는 것을 자신들만의 것으로 만들었을 것이다.',
+    author: 'Mark Twain'
     },
     {
-    quote: 'The only thing worse than starting something and falling.. is not starting something',
-    author: 'SEth Godin'
+    quote: '우리가 변할 때 더 나아 질 것이라고 장담할 수는 없지만, 확실한 것은 더 나아지고 싶다면 변해야 한다는 것이다.',
+    author: 'Georg C. Lichtenberg'
     },
     {
-    quote: 'If you really want to do something, you will find a way. If you do not, you will find an excuse.',
-    author: 'Jim Rohn'
+    quote: '우리가 더 이상 상황을 바꿀 수 없을 때, 우리는 우리 자신을 바꾸도록 도전 받는 것이다.',
+    author: 'Viktor Frankl'
     },
     ];
 
     const quote = document.querySelector("#quote span:first-child");
     const author = document.querySelector("#quote span:last-child");
-
-    const todaysQuote = quotes[Math.floor(Math.random()*quotes.length)];
-    quote.innerText = todaysQuote.quote;
-    author.innerText = todaysQuote.author;
+    function randomQuote() {
+        const todaysQuote = quotes[Math.floor(Math.random()*quotes.length)];
+        quote.innerText = todaysQuote.quote;
+        author.innerText = `-${todaysQuote.author}-`;
+    }
+    randomQuote();
+    setInterval(randomQuote,6000);

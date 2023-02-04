@@ -3,6 +3,8 @@ const loginInput = document.querySelector("#login-form input");
 const greeting = document.querySelector("#greeting");
 
 const loginBar = document.querySelector(".login-bar");
+const menu__box = document.querySelector(".menu__box");
+const todo = document.querySelector(".todo");
 
 const toDo = document.querySelector("#todo-form");
 const quoteHidden = document.querySelector("#quote");
@@ -13,6 +15,8 @@ const USERNAME_KEY = "username";
 function paintGreetings(username) {
     toDo.classList.remove("hidden");
     quoteHidden.classList.remove("hidden");
+    todo.classList.remove("hidden");
+    menu__box.classList.remove("hidden");
     greeting.classList.remove("hidden");
     greeting.innerText = `Hello ${username}`;
 }
